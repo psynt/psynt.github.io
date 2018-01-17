@@ -1,7 +1,10 @@
-var myList = {};
-$.getJSON('wishlist.json', function (data) {
-    myList = data;
-});
+var myList = [
+    { "Brand":"Pilot Iroshizuku", "name": "Kon-Peki"},
+    { "Brand":"Diamine", "name": "Turqoise"},
+    { "Brand":"Private Reserve", "name": "Tropical Blue", "size" : "s"},
+    { "Brand":"Private Reserve", "name": "Daphne Blue", "size" : "s"},
+    { "Brand":"Private Reserve", "name": "Electric DC Blue", "size" : "s"}
+];
 // Builds the HTML Table out of myList.
 function buildHtmlTable(selector) {
   var columns = addAllColumnHeaders(myList, selector);
