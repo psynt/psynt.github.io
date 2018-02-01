@@ -23,7 +23,7 @@ function addAllColumnHeaders(myList, selector) {
   for (var i = 0; i < myList.length; i++) {
     var rowHash = myList[i];
     for (var key in rowHash) {
-      if ($.inArray(key, columnSet) == -1) {
+      if ($.inArray(key, columnSet) === -1) {
         columnSet.push(key);
         headerTr$.append($('<th/>').html(key));
       }
