@@ -1,0 +1,9 @@
+input[type=checkbox]{
+    position: absolute;
+    top: -9999px;
+    left: -999px;
+}
+
+input[type=checkbox]:not(:checked) ~ label{
+    visibility: hidden;
+}
