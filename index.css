@@ -1,7 +1,41 @@
+:root {
+        --prim-bold: hsl(265, 100%, 45%);
+        --prim-fg: hsl(265, 100%, 30%);
+        --prim-bg: hsl(265, 100%, 10%);
+        --snd-bold: hsl(5, 100%, 45%);
+        --snd-fg: hsl(5, 100%, 25%);
+        --snd-bg: hsl(5, 100%, 10%);
+}
+
 body{
-        background-image: url("img/danganronpa_principal_2_by_downcomta-d6tdyta.jpg");
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        display: grid;
+        grid-template-areas:
+                'header header header'
+                'menu main aside'
+                'menu footer footer';
+        gap: .2rem;
+        padding: .1rem;
 }
-.konpeki{
-        font-size: xx-large;
-        color: #005B98;
+
+main {
+        grid-area: main;
+        width: 80%;
 }
+
+header {
+        color: var(--prim-bold);
+        text-transform: capitalize;
+        font-size: 2rem;
+}
+
+header::first-letter{
+        color: var(--snd-bold);
+}
+
+section{
+        color: lightgrey;
+}
+
