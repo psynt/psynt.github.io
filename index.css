@@ -1,41 +1,55 @@
 :root {
-        --prim-bold: hsl(265, 100%, 45%);
-        --prim-fg: hsl(265, 100%, 30%);
-        --prim-bg: hsl(265, 100%, 10%);
-        --snd-bold: hsl(5, 100%, 45%);
-        --snd-fg: hsl(5, 100%, 25%);
-        --snd-bg: hsl(5, 100%, 10%);
+    --prim-bold: hsl(265, 100%, 45%);
+    --prim-fg: hsl(265, 100%, 30%);
+    --prim-bg: hsl(265, 100%, 20%);
+    --snd-bold: hsl(5, 100%, 45%);
+    --snd-fg: hsl(5, 100%, 25%);
+    --snd-bg: hsl(5, 100%, 10%);
 }
 
-body{
-        background-color: black;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 16px;
-        display: grid;
-        grid-template-areas:
-                'header header header'
-                'menu main aside'
-                'menu footer footer';
-        gap: .2rem;
-        padding: .1rem;
+body {
+    color: lightgray;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'menu main aside'
+        'menu footer footer';
+    gap: .2rem;
+    padding: .1rem;
 }
 
 main {
-        grid-area: main;
-        width: 80%;
+    grid-area: main;
+    width: 80%;
 }
 
 header {
-        color: var(--prim-bold);
-        text-transform: capitalize;
-        font-size: 2rem;
+    color:var(--prim-fg);
+    font-size: 2rem;
 }
 
-header::first-letter{
-        color: var(--snd-bold);
+.name {
+    color: var(--prim-bold);
+    text-shadow: 2px 2px var(--snd-bg);
+    text-transform: capitalize;
 }
 
-section{
-        color: lightgrey;
+.name:hover{
+    color: var(--snd-bold);
 }
 
+section {
+    color: lightgrey;
+    line-height: 1.2;
+}
+
+a {
+    color: var(--snd-fg);
+}
+
+a:hover {
+    color: var(--snd-bold);
+}
