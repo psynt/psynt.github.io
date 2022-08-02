@@ -1,17 +1,17 @@
 :root {
-    --prim-bold: hsl(265, 100%, 45%);
-    --prim-fg: hsl(265, 100%, 30%);
-    --prim-bg: hsl(265, 100%, 20%);
-    --snd-bold: hsl(5, 100%, 45%);
-    --snd-fg: hsl(5, 100%, 25%);
-    --snd-bg: hsl(5, 100%, 10%);
+    --prim-bold: hsl(265, 100%, 65%);
+    --prim-fg: hsl(265, 100%, 40%);
+    --prim-bg: hsl(265, 100%, 30%);
+    --snd-bold: hsl(5, 100%, 65%);
+    --snd-fg: hsl(5, 100%, 35%);
+    --snd-bg: hsl(5, 100%, 15%);
 }
 
 body {
     color: lightgray;
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     display: grid;
     grid-template-areas:
         'header header header'
@@ -22,6 +22,7 @@ body {
 }
 
 main {
+    margin-top: 25%;
     grid-area: main;
     width: 80%;
 }
@@ -52,4 +53,20 @@ a {
 
 a:hover {
     color: var(--snd-bold);
+}
+
+section {
+    margin-bottom: 0.8rem;
+}
+
+div.subsection {
+    margin-bottom: 0.6rem;
+}
+
+div.subsubsection {
+    margin-bottom: 0.5rem;
+}
+
+section.cv {
+    display: none;
 }
