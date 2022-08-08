@@ -5,6 +5,7 @@
     --snd-bold: hsl(5, 100%, 65%);
     --snd-fg: hsl(5, 100%, 35%);
     --snd-bg: hsl(5, 100%, 15%);
+    --hidden: hsl(0, 0%, 5%);
 }
 
 body {
@@ -69,4 +70,10 @@ div.subsubsection {
 
 section.cv {
     display: none;
+}
+
+div.camouflaged {
+    text-align: center;
+    color: var(--hidden);
+    font-size: 221px;
 }
