@@ -1,0 +1,50 @@
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+    --primary: hsl(265, 100%, 40%);
+    --primary-hover: hsl(265, 100%, 65%);
+    --primary-focus: hsl(265, 100%, 30%);
+    --primary-inverse: #FFF;
+}
+
+
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        --primary: hsl(265, 100%, 40%);
+        --primary-hover: hsl(265, 100%, 65%);
+        --primary-focus: hsl(265, 100%, 30%);
+        --primary-inverse: #FFF;
+    }
+}
+
+/* Deep-purple Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+    --primary: hsl(265, 100%, 40%);
+    --primary-hover: hsl(265, 100%, 65%);
+    --primary-focus: hsl(265, 100%, 30%);
+    --primary-inverse: #FFF;
+}
+
+/* Deep-purple (Common styles) */
+:root {
+    --form-element-active-border-color: var(--primary);
+    --form-element-focus-color: var(--primary-focus);
+    --switch-color: var(--primary-inverse);
+    --switch-checked-background-color: var(--primary);
+
+    --contrast-a: hsl(30, 100%, 42%);
+    --contrast-b: hsl(300, 100%, 42%);
+    --contrast-gradient: linear-gradient(.05turn, var(--contrast-a), var(--contrast-b));
+}
+
+button {
+    background-image: var(--contrast-gradient);
+}
+
+.name:hover {
+    /* color: var(--primary); */
+    background: -webkit-linear-gradient(.05turn, var(--contrast-a), var(--contrast-b));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

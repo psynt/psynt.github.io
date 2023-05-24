@@ -29,7 +29,7 @@ main {
 }
 
 header {
-    color:var(--prim-fg);
+    color: var(--prim-fg);
     font-size: 2rem;
 }
 
@@ -39,7 +39,7 @@ header {
     text-transform: capitalize;
 }
 
-.name:hover{
+.name:hover {
     color: var(--snd-bold);
 }
 
