@@ -1,28 +1,34 @@
+/* light */
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
     --primary: hsl(265, 100%, 40%);
     --primary-hover: hsl(265, 100%, 65%);
     --primary-focus: hsl(265, 100%, 30%);
     --primary-inverse: #FFF;
+    --background-color: #fff;
+    --section-background-color: whitesmoke;
 }
 
-
+/* dark */
 @media only screen and (prefers-color-scheme: dark) {
     :root:not([data-theme]) {
         --primary: hsl(265, 100%, 40%);
         --primary-hover: hsl(265, 100%, 65%);
         --primary-focus: hsl(265, 100%, 30%);
         --primary-inverse: #FFF;
+        --background-color: hsl(200, 100%, 4%);
+        --section-background-color: hsl(200, 100%, 6%);
     }
 }
 
-/* Deep-purple Dark scheme (Forced) */
-/* Enabled if forced with data-theme="dark" */
+/* dark */
 [data-theme="dark"] {
     --primary: hsl(265, 100%, 40%);
     --primary-hover: hsl(265, 100%, 65%);
     --primary-focus: hsl(265, 100%, 30%);
     --primary-inverse: #FFF;
+    --background-color: hsl(200, 100%, 4%);
+    --section-background-color: hsl(200, 100%, 6%);
 }
 
 /* Deep-purple (Common styles) */
@@ -31,6 +37,9 @@
     --form-element-focus-color: var(--primary-focus);
     --switch-color: var(--primary-inverse);
     --switch-checked-background-color: var(--primary);
+
+    --background-color-dark: hsl(200, 100%, 5%);
+    --background-color-light: #fff;
 
     --contrast-a: hsl(30, 100%, 42%);
     --contrast-b: hsl(300, 100%, 42%);
@@ -42,9 +51,100 @@ button {
 }
 
 .name:hover {
-    /* color: var(--primary); */
     background: -webkit-linear-gradient(.05turn, var(--contrast-a), var(--contrast-b));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+
+
+html>body>main>section {
+    background-color: var(--section-background-color);
+    padding: 1rem;
+    line-height: 2rem;
+}
+
+body>header {
+    padding: 0;
+    margin-block: 1rem;
+    background-color: var(--section-background-color);
+}
+
+header>h1>.name {
+    background: -webkit-linear-gradient(.05turn, var(--contrast-a), var(--contrast-b));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    padding: 1rem;
+    font-size: 4rem;
+}
+
+body>main {
+    padding: 1rem;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.big {
+    font-weight: 700;
+    font-size: 3rem;
+    background: -webkit-linear-gradient(.05turn, var(--contrast-a), var(--contrast-b));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-block: 1rem;
+}
+
+span[data-tooltip] {
+    text-decoration: none;
+    border: none;
+}
+
+.summary {
+    line-height: 3rem;
+}
+
+.content {
+    z-index: 1;
+    position: relative;
+}
+
+.about {
+    z-index: 1;
+    position: relative;
+}
+
+.camouflaged {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    font-weight: 900;
+    font-size: 15rem;
+    color: var(--background-color);
+    right: -4%;
+    top: 35%;
+    z-index: 0;
+}
+
+
+@media (min-width: 576px) {
+    .camouflaged {
+        right: -7%;
+    }
+}
+
+@media (min-width: 768px) {
+    .camouflaged {
+        right: -5%;
+    }
+}
+
+@media (min-width: 992px) {
+    .camouflaged {
+        right: -4%;
+    }
 }
