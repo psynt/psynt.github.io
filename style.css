@@ -12,12 +12,12 @@
 /* dark */
 @media only screen and (prefers-color-scheme: dark) {
     :root:not([data-theme]) {
-        --primary: hsl(265, 100%, 40%);
+        --primary: hsl(265, 100%, 50%);
         --primary-hover: hsl(265, 100%, 65%);
         --primary-focus: hsl(265, 100%, 30%);
         --primary-inverse: #FFF;
-        --background-color: hsl(200, 100%, 4%);
-        --section-background-color: hsl(200, 100%, 6%);
+        --background-color: hsl(265, 100%, 8%);
+        --section-background-color: hsl(265, 100%, 11%);
     }
 }
 
