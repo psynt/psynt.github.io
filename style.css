@@ -67,7 +67,7 @@ html>body>main>section {
 
 body>header {
     padding: 0;
-    margin-block: 1rem;
+    //margin-block: 1rem;
     background-color: var(--section-background-color);
 }
 
@@ -148,3 +148,11 @@ span[data-tooltip] {
         right: -4%;
     }
 }
+
+
+body {
+    background-image: url("img/shotn34.png");
+    background-attachment: fixed;
+}
+
+
